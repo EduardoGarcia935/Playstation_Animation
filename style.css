@@ -12,6 +12,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    perspective: 200px;
+
 }
 
 svg{
@@ -20,25 +22,92 @@ svg{
 }
 
 #square{
-    fill-opacity: 0;
+    animation: show 7s ease forwards,
+               up-square 4s ease 5s forwards;
 }
 
 #x{
-    fill-opacity: 0;
+    animation: show 7s ease forwards,
+               up-x 4s ease 5s forwards;
 }
 
 #o{
-    fill-opacity: 0;
+    animation: show 7s ease forwards,
+               up-circle 4s ease 5s forwards;
 }
 
 #triangle{
-    fill-opacity: 0;
+    animation: show 7s ease forwards,
+               up-triangle 4s ease 5s forwards;
 }
 
 #logo{
-    fill-opacity: 0;
+    opacity: 0;
 }
 
 #logo-square{
-    fill-opacity: 0;
+    opacity: 0;
+}
+
+@keyframes up-triangle {
+    from{
+        transform: translateY(0px) translateX(0px);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-280px) translateX(230px);
+        opacity: 0;
+    }
+}
+
+@keyframes up-circle {
+    from{
+        transform: translateY(0px) translateX(0px);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-280px) translateX(85px);
+        opacity: 0;
+    }
+}
+
+@keyframes up-x {
+    from{
+        transform: translateY(0px) translateX(0px);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-280px) translateX(-60px);
+        opacity: 0;
+    }
+}
+
+@keyframes up-square {
+    from{
+        transform: translateY(0px) translateX(0px);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-280px) translateX(-210px);
+        opacity: 0;
+    }
+}
+
+@keyframes show {
+    0%{
+        fill-opacity: 0;
+        stroke-dasharray: 1 1000;
+        stroke-width: 0;
+    }
+    50%{
+        fill-opacity: 0;
+        stroke-dasharray: 150 1;
+        stroke-width: 1;
+    }
+    100%{
+        fill-opacity: 1;
+        stroke-dasharray: 150 1;
+        stroke-width: 1;
+    }
+
 }
