@@ -43,10 +43,74 @@ svg{
 
 #logo{
     opacity: 0;
+    animation: logo 7s ease 5.5s forwards;
+
 }
 
 #logo-square{
     opacity: 0;
+    animation: logo 7s ease 5.5s forwards;
+
+}
+
+@keyframes logo {
+    0%{
+        transform: skew(45deg , 0deg)
+               translateY(400px)
+               translateX(200px);
+        opacity: 0;
+        scale: 0.3;
+        fill-opacity: 0;
+        stroke-dasharray: 1 1000;
+        filter: drop-shadow(20px 20px 20px rgba(0, 0, 0 ,0))
+                drop-shadow(-20px 20px 20px rgba(0, 0, 0 ,0));
+
+    }
+    10%{
+        transform: skew(45deg , 0deg)
+               translateY(0px)
+               translateX(0px);
+        opacity: 1;
+        scale: 0.3;
+        fill-opacity: 0;
+        stroke-dasharray: 1 1000;
+        filter: drop-shadow(20px 20px 20px rgba(0, 0, 0 ,0))
+                drop-shadow(-20px 20px 20px rgba(0, 0, 0 ,0));
+    }
+    50%{
+        transform: skew(0deg , 0deg)
+               translateY(0px)
+               translateX(0px);
+        opacity: 1;
+        scale: 1;
+        fill-opacity: 0;
+        stroke-dasharray: 150 0;
+        filter: drop-shadow(20px 20px 20px rgba(0, 0, 0 ,0))
+                drop-shadow(-20px 20px 20px rgba(0, 0, 0 ,0));
+        
+    }
+    60%{
+        transform: skew(0deg , 0deg)
+               translateY(0px)
+               translateX(0px);
+        opacity: 1;
+        scale: 1;
+        fill-opacity: 1;
+        stroke-dasharray: 150 0;
+        filter: drop-shadow(20px 20px 20px rgba(0, 0, 0 ,0))
+                drop-shadow(-20px 20px 20px rgba(0, 0, 0 ,0));
+    }
+    100%{
+        transform: skew(0deg , 0deg)
+               translateY(0px)
+               translateX(0px);
+        opacity: 1;
+        scale: 1;
+        fill-opacity: 1;
+        stroke-dasharray: 150 0;
+        filter: drop-shadow(20px 20px 20px rgba(151, 165, 211 ,0.5))
+                drop-shadow(-20px 20px 20px rgba(151, 165, 211 ,0.5));
+    }
 }
 
 @keyframes up-triangle {
